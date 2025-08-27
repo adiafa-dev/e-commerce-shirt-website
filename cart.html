@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capstone-Tokyo-Team-H - Cart Page</title>
+    <link href="./src/css/output.css" rel="stylesheet" />
+  </head>
+  <body class="text-neutral-950 font-sfPro">
+    <!-- === start HEADER === -->
+    <header class="drop-shadow-sm drop-shadow-neutral-300 bg-white p-4 md:p-0">
+      <div class="w-full md:w-[1200px] mx-auto flex gap-4 md:py-5 md:gap-20 items-center">
+        <!-- === TOP LOGO === -->
+        <div class="md:w-1/6">
+          <a href="./index.html" class="flex items-center gap-1 md:gap-2.5">
+            <img src="./assets/images/icons/logo.svg" alt="Shirt Logo" class="w-[32px] md:w-auto" />
+            <span class="text-neutral-950 text-2xl font-bold hidden md:block">Shirt</span>
+          </a>
+        </div>
+
+        <!-- === TOP CATALOG BUTTON & SEARCH === -->
+        <div class="flex w-full md:w-1/2 gap-1 md:gap-2.5">
+          <a id="btnCatalog" class="flex items-center px-2 md:px-4 gap-2.5 text-sm border-neutral-300 border rounded-xl hover:bg-primary group transition duration-500" href="./catalog.html">
+            <img src="./assets/images/icons/catalog.svg" alt="Catalog Icon" class="w-[20px]" />
+            <span class="text-neutral-950 text-sm hidden md:block group-hover:scale-110 transition duration-500">Catalog</span>
+          </a>
+
+          <div id="searchInput" class="relative flex grow">
+            <input type="search" class="w-full pl-10 pr-4 py-2 rounded-xl border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm" placeholder="Search" />
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <svg class="h-5 w-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- === TOP CART & USER === -->
+        <div class="flex items-center justify-end md:justify-center gap-4 md:w-1/4">
+          <a href="./cart.html" id="cartWrapper" class="relative flex">
+            <img src="./assets/images/icons/cart.svg" alt="Cart" class="w-[42px] md:w-[22px]" />
+            <span class="absolute flex justify-center items-center text-xs text-white bg-[#EE1D52] rounded-full font-semibold aspect-square w-6 -top-3 -right-3">6</span>
+          </a>
+
+          <div id="userLog" class="hidden md:flex items-center gap-2.5 border-neutral-300 border rounded-xl py-3 px-4 grow">
+            <img src="./assets/images/icons/people.svg" alt="User Icon" />
+            <span class="text-neutral-950 text-sm">John Doe</span>
+          </div>
+
+          <!-- === Hamburger (mobile only) === -->
+          <button class="md:hidden text-2xl">☰</button>
+        </div>
+      </div>
+    </header>
+    <!-- === end HEADER === -->
+
+    <!-- start section cart -->
+    <section class="w-full">
+      <section class="w-full md:w-[1200px] mx-auto pt-10 pb-10 md:pb-16">
+        <!-- Section contains -->
+        <section class="mx-auto md:grid grid-cols-[7fr_3fr] w-full gap-6">
+          <!-- first column -->
+          <section class="w-full mx-auto">
+            <h1 class="font-bold text-3xl md:text-[32px] leading-9 md:leading-[42px] pb-8 px-4 md:px-0">Cart</h1>
+
+            <form action="#">
+              <input class="text-black rounded-sm w-5 h-5 ml-4 md:ml-0" type="checkbox" name="cart" id="selectall" />
+              <label for="selectall" class="pl-3 text-sm md:text-base font-medium leading-7"> Select All</label><br />
+
+              <!-- products choosen -->
+              <div class="md:flex md:justify-between mt-5 md:mt-6 md:pb-5 px-4 md:px-0">
+                <div class="flex items-center md:flex md:justify-between md:items-start">
+                  <div class="pr-5">
+                    <input class="text-black rounded-sm w-5 h-5" type="checkbox" name="cart" id="" />
+                  </div>
+
+                  <img src="./assets/images/prod-10.png" alt="sneakers-court-minimalis" class="w-20 h-20 rounded-xl" />
+
+                  <div class="md:flex md:flex-col gap-3 pl-5">
+                    <h2 class="md:text-left leading-7 md:leading-8 font-bold text-sm md:text-lg">Sneakers Court Minimalis</h2>
+                    <p class="text-[#535862] text-xs md:text-base leading-4 font-normal">Shoes</p>
+                  </div>
+                </div>
+
+                <div class="flex flex-row justify-between md:flex md:flex-col">
+                  <h2 class="md:leading-5 font-bold text-sm md:text-xl text-[#0A0D12] pl-10 md:pl-0 py-3 md:py-0 pt-5 md:pt-0 md:text-right">Rp 275.000</h2>
+
+                  <!-- Quantity section product -->
+                  <div class="flex items-center gap-4">
+                    <a href="#"><img src="./assets/images/icons/trash.svg" alt="Trash Icon" /></a>
+
+                    <div class="flex items-center border border-neutral-300 rounded-xl p-1 w-fit">
+                      <!-- Tombol Minus -->
+                      <button class="text-xl font-bold px-2 cursor-pointer">-</button>
+
+                      <!-- Angka -->
+                      <span class="mx-4 text-xl font-medium">2</span>
+
+                      <!-- Tombol Plus -->
+                      <button class="text-xl font-bold px-2 cursor-pointer">+</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="bg-[#DFDFDF] dark:bg-[#252B37] h-px border-0 w-full" />
+
+              <div class="md:flex md:justify-between mt-5 md:mt-10 md:pb-5 px-4 md:px-0">
+                <div class="flex items-center md:flex md:justify-between md:items-start">
+                  <div class="pr-5">
+                    <input class="text-black rounded-sm w-5 h-5" type="checkbox" name="cart" id="" />
+                  </div>
+
+                  <img src="./assets/images/prod-15.png" alt="kaos-katun-premium" class="w-20 h-20 rounded-xl" />
+
+                  <div class="md:flex md:flex-col gap-3 pl-5">
+                    <h2 class="md:text-left leading-7 md:leading-8 font-bold text-sm md:text-lg">Kaos Katun Premium</h2>
+                    <p class="text-[#535862] text-xs md:text-base leading-4 font-normal">T-Shirt</p>
+                  </div>
+                </div>
+
+                <div class="flex flex-row justify-between md:flex md:flex-col">
+                  <h2 class="md:leading-5 font-bold text-sm md:text-xl text-[#0A0D12] pl-10 md:pl-0 py-3 md:py-0 pt-5 md:pt-0 md:text-right">Rp 1.100.000</h2>
+
+                  <!-- Quantity section product -->
+                  <div class="flex items-center gap-4">
+                    <a href="#"><img src="./assets/images/icons/trash.svg" alt="Trash Icon" /></a>
+
+                    <div class="flex items-center border border-neutral-300 rounded-xl p-1 w-fit">
+                      <!-- Tombol Minus -->
+                      <button class="text-xl font-bold px-2 cursor-pointer">-</button>
+
+                      <!-- Angka -->
+                      <span class="mx-4 text-xl font-medium">2</span>
+
+                      <!-- Tombol Plus -->
+                      <button class="text-xl font-bold px-2 cursor-pointer">+</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="bg-[#DFDFDF] dark:bg-[#252B37] h-px border-0 w-full" />
+
+              <div class="md:flex md:justify-between mt-5 md:mt-10 md:pb-5 px-4 md:px-0">
+                <div class="flex items-center md:flex md:justify-between md:items-start">
+                  <div class="pr-5">
+                    <input class="text-black rounded-sm w-5 h-5" type="checkbox" name="cart" id="" />
+                  </div>
+
+                  <img src="./assets/images/prod-14.png" alt="topi-baseball-6-panel" class="w-20 h-20 rounded-xl" />
+
+                  <div class="md:flex md:flex-col gap-3 pl-5">
+                    <h2 class="md:text-left leading-7 md:leading-8 font-bold text-sm md:text-lg">Topi Baseball 6-Panel</h2>
+                    <p class="text-[#535862] text-xs md:text-base leading-4 font-normal">Accessories</p>
+                  </div>
+                </div>
+
+                <div class="flex flex-row justify-between md:flex md:flex-col">
+                  <h2 class="md:leading-5 font-bold text-sm md:text-xl text-[#0A0D12] pl-10 md:pl-0 py-3 md:py-0 pt-5 md:pt-0 md:text-right">Rp 320.000</h2>
+
+                  <!-- Quantity section product -->
+                  <div class="flex items-center gap-4">
+                    <a href="#"><img src="./assets/images/icons/trash.svg" alt="Trash Icon" /></a>
+
+                    <div class="flex items-center border border-neutral-300 rounded-xl p-1 w-fit">
+                      <!-- Tombol Minus -->
+                      <button class="text-xl font-bold px-2 cursor-pointer">-</button>
+
+                      <!-- Angka -->
+                      <span class="mx-4 text-xl font-medium">2</span>
+
+                      <!-- Tombol Plus -->
+                      <button class="text-xl font-bold px-2 cursor-pointer">+</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="bg-[#DFDFDF] dark:bg-[#252B37] h-px border-0 w-full" />
+
+              <div class="md:flex md:justify-between mt-5 md:mt-10 md:pb-5 px-4 md:px-0">
+                <div class="flex items-center md:flex md:justify-between md:items-start">
+                  <div class="pr-5">
+                    <input class="text-black rounded-sm w-5 h-5" type="checkbox" name="cart" id="" />
+                  </div>
+
+                  <img src="./assets/images/prod-9.png" alt="celana-panjang-tailored" class="w-20 h-20 rounded-xl" />
+
+                  <div class="md:flex md:flex-col gap-3 pl-5">
+                    <h2 class="md:text-left leading-7 md:leading-8 font-bold text-sm md:text-lg">Celana Panjang Tailored</h2>
+                    <p class="text-[#535862] text-xs md:text-base leading-4 font-normal">Trousers</p>
+                  </div>
+                </div>
+
+                <div class="flex flex-row justify-between md:flex md:flex-col">
+                  <h2 class="md:leading-5 font-bold text-sm md:text-xl text-[#0A0D12] pl-10 md:pl-0 py-3 md:py-0 pt-5 md:pt-0 md:text-right">Rp 2.200.000</h2>
+
+                  <!-- Quantity section product -->
+                  <div class="flex items-center gap-4">
+                    <a href="#"><img src="./assets/images/icons/trash.svg" alt="Trash Icon" /></a>
+
+                    <div class="flex items-center border border-neutral-300 rounded-xl p-1 w-fit">
+                      <!-- Tombol Minus -->
+                      <button class="text-xl font-bold px-2 cursor-pointer">-</button>
+
+                      <!-- Angka -->
+                      <span class="mx-4 text-xl font-medium">2</span>
+
+                      <!-- Tombol Plus -->
+                      <button class="text-xl font-bold px-2 cursor-pointer">+</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="bg-[#DFDFDF] dark:bg-[#252B37] h-px border-0 w-full" />
+
+              <div class="md:flex md:justify-between mt-5 md:mt-10 md:pb-5 px-4 md:px-0">
+                <div class="flex items-center md:flex md:justify-between md:items-start">
+                  <div class="pr-5">
+                    <input class="text-black rounded-sm w-5 h-5" type="checkbox" name="cart" id="" />
+                  </div>
+
+                  <img src="./assets/images/prod-16.png" alt="hoodie-pullover-fleece" class="w-20 h-20 rounded-xl" />
+
+                  <div class="md:flex md:flex-col gap-3 pl-5">
+                    <h2 class="md:text-left leading-7 md:leading-8 font-bold text-sm md:text-lg">Hoodie Pullover Fleece</h2>
+                    <p class="text-[#535862] text-xs md:text-base leading-4 font-normal">Jacket</p>
+                  </div>
+                </div>
+
+                <div class="flex flex-row justify-between md:flex md:flex-col">
+                  <h2 class="md:leading-5 font-bold text-sm md:text-xl text-[#0A0D12] pl-10 md:pl-0 py-3 md:py-0 pt-5 md:pt-0 md:text-right">Rp 275.000</h2>
+
+                  <!-- Quantity section product -->
+                  <div class="flex items-center gap-4">
+                    <a href="#"><img src="./assets/images/icons/trash.svg" alt="Trash Icon" /></a>
+
+                    <div class="flex items-center border border-neutral-300 rounded-xl p-1 w-fit">
+                      <!-- Tombol Minus -->
+                      <button class="text-xl font-bold px-2 cursor-pointer">-</button>
+
+                      <!-- Angka -->
+                      <span class="mx-4 text-xl font-medium">2</span>
+
+                      <!-- Tombol Plus -->
+                      <button class="text-xl font-bold px-2 cursor-pointer">+</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </section>
+
+          <!-- second column -->
+          <section class="px-4 md:px-0">
+            <section class="h-fit w-full rounded-xl ] bg-white shadow-[0px_0px_20px_0px_#CBCACA40] gap-4 py-5 px-5 mt-10 md:mt-0">
+              <h2 class="text-left md:leading-8 font-bold text-lg text-[#0A0D12] pt-3">Total Shopping</h2>
+              <div class="flex justify-between gap-2 py-2">
+                <h2 class="text-left md:leading-8 font-normal text-base py-3">Total</h2>
+                <h2 class="text-right md:leading-8 font-bold text-base py-3">Rp275.000</h2>
+              </div>
+
+              <a href="./checkout.html" class="block w-full bg-black text-white font-semibold text-base text-center py-3 rounded-lg hover:bg-primary hover:text-black hover:scale-105 duration-500 transition">Checkout</a>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+    <!-- end section cart -->
+
+    <!-- === start FOOTER === -->
+    <footer class="border-t border-neutral-300 py-10">
+      <div id="footerWrapper" class="max-w-[1200px] w-full mx-auto flex flex-col gap-5 md:flex-row md:gap-10 px-4">
+        <!-- === LEFT SECTION SHIRT === -->
+        <div class="w-full md:w-1/2">
+          <div class="flex items-center gap-2.5 w-full pb-5">
+            <img src="./assets/images/icons/logo.svg" alt="Shirt Logo" />
+            <span class="text-neutral-950 text-2xl font-bold">Shirt</span>
+          </div>
+
+          <p class="text-sm pb-4 md:text-base md:pb-10 md:w-3/4">
+            Explore a realm of style with our fashion e-commerce platform, where shopping is effortless. Experience a smooth journey with an extensive selection of trendy apparel, all delivered directly to your home
+          </p>
+
+          <!-- === SOCIAL MEDIA === -->
+          <div>
+            <h4 class="font-bold pb-5">Follow on Social Media</h4>
+            <div class="flex gap-5">
+              <a href="#" class="border border-neutral-300 aspect-square rounded-full w-10 flex justify-center items-center hover:bg-primary transition duration-500">
+                <img src="./assets/images/icons/fb.svg" alt="Facebook" />
+              </a>
+              <a href="#" class="border border-neutral-300 aspect-square rounded-full w-10 flex justify-center items-center hover:bg-primary transition duration-500">
+                <img src="./assets/images/icons/instagram.svg" alt="instagram" />
+              </a>
+              <a href="#" class="border border-neutral-300 aspect-square rounded-full w-10 flex justify-center items-center hover:bg-primary transition duration-500">
+                <img src="./assets/images/icons/linked-in.svg" alt="Linked In" />
+              </a>
+              <a href="#" class="border border-neutral-300 aspect-square rounded-full w-10 flex justify-center items-center hover:bg-primary transition duration-500">
+                <img src="./assets/images/icons/tiktok.svg" alt="tiktok" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- === E-COMMERCE === -->
+        <div class="w-full md:w-1/4 pt-2.5 text-sm md:text-base">
+          <h4 class="font-bold pb-5">E-commerce</h4>
+          <ul class="flex flex-col gap-5">
+            <li><a href="#" class="hover:text-primary transition duration-500">About Us</a></li>
+            <li><a href="#" class="hover:text-primary transition duration-500">Terms & Condition</a></li>
+            <li><a href="#" class="hover:text-primary transition duration-500">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-primary transition duration-500">Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- === HELP === -->
+        <div class="w-full md:w-1/4 pt-2.5 text-sm md:text-base">
+          <h4 class="font-bold pb-5">Help</h4>
+          <ul class="flex flex-col gap-5">
+            <li><a href="#" class="hover:text-primary transition duration-500">How to Transact</a></li>
+            <li><a href="#" class="hover:text-primary transition duration-500">Payment Method</a></li>
+            <li><a href="#" class="hover:text-primary transition duration-500">How to Register</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- === end FOOTER === -->
+  </body>
+</html>

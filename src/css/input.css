@@ -1,0 +1,23 @@
+/* Custom Font SF Pro */
+@import './font.css';
+
+@import 'tailwindcss';
+
+/* plugin form */
+@plugin "@tailwindcss/forms";
+
+/* ---------- Custom Utility Class ---------- */
+@theme {
+  /* color */
+  --color-primary: #fdb022;
+
+  /* font */
+  --font-sfPro: 'SF-Pro', sans-serif;
+}
+
+@layer components {
+  /* custom class */
+  .item-card {
+    @apply w-full rounded-xl drop-shadow-sm drop-shadow-neutral-300 bg-white overflow-hidden;
+  }
+}

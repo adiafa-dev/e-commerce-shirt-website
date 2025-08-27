@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Capstone-Tokyo-Team-H - Home Page</title>
+    <link href="./src/css/output.css" rel="stylesheet" />
+  </head>
+  <body class="text-neutral-950 font-sfPro">
+    <!-- === start HEADER === -->
+    <header class="drop-shadow-sm drop-shadow-neutral-300 bg-white p-4 md:p-0">
+      <div class="w-full md:w-[1200px] mx-auto flex gap-4 md:py-5 md:gap-20 items-center">
+        <!-- === TOP LOGO === -->
+        <div class="md:w-1/6">
+          <a href="./index.html" class="flex items-center gap-1 md:gap-2.5">
+            <img src="./assets/images/icons/logo.svg" alt="Shirt Logo" class="w-[32px] md:w-auto" />
+            <span class="text-neutral-950 text-2xl font-bold hidden md:block">Shirt</span>
+          </a>
+        </div>
+
+        <!-- === TOP CATALOG BUTTON & SEARCH === -->
+        <div class="flex w-full md:w-1/2 gap-1 md:gap-2.5">
+          <a id="btnCatalog" class="flex items-center px-2 md:px-4 gap-2.5 text-sm border-neutral-300 border rounded-xl hover:bg-primary group transition duration-500" href="./catalog.html">
+            <img src="./assets/images/icons/catalog.svg" alt="Catalog Icon" class="w-[20px]" />
+            <span class="text-neutral-950 text-sm hidden md:block group-hover:scale-105 transition duration-500">Catalog</span>
+          </a>
+
+          <div id="searchInput" class="relative flex grow">
+            <input type="search" class="w-full pl-10 pr-4 py-2 rounded-xl border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm" placeholder="Search" />
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <svg class="h-5 w-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- === TOP CART & USER === -->
+        <div class="flex items-center justify-end md:justify-center gap-4 md:w-1/4">
+          <a id="cartWrapper" class="relative flex" href="./cart.html">
+            <img src="./assets/images/icons/cart.svg" alt="Cart" class="w-[42px] md:w-[22px]" />
+            <span class="absolute flex justify-center items-center text-xs text-white bg-[#EE1D52] rounded-full font-semibold aspect-square w-6 -top-3 -right-3">6</span>
+          </a>
+
+          <div id="userLog" class="hidden md:flex items-center gap-2.5 border-neutral-300 border rounded-xl py-3 px-4 grow">
+            <img src="./assets/images/icons/people.svg" alt="User Icon" />
+            <span class="text-neutral-950 text-sm">John Doe</span>
+          </div>
+
+          <!-- === Hamburger (mobile only) === -->
+          <button class="md:hidden text-2xl">☰</button>
+        </div>
+      </div>
+    </header>
+    <!-- === end HEADER === -->
+
+    <!-- === start HEROES CONTAINER  === -->
+    <section id="heroesSection" class="relative flex flex-col p-4 md:py-10 md:px-0">
+      <div class="max-w-[1200px] mx-auto">
+        <div id="containerNewCollection" class="flex items-center justify-between w-full bg-[#F3D7A4] rounded-[16px] shadow-md gap-4">
+          <!-- === HERO IMAGE  === -->
+          <div class="flex-shrink-0 w-1/2 md:w-1/3 flex justify-center md:mb-0">
+            <img src="./assets/images/heroes-img.png" alt="New Collection Man & Woman" class="h-64 md:h-72 object-cover rounded-lg" />
+          </div>
+
+          <!-- === CONTAINER NEW COLLECTION TEXT === -->
+          <div class="w-1/2 md:w-2/3">
+            <h1 class="text-base md:text-[56px] font-bold text-[#553E32]">NEW COLLECTION</h1>
+            <p class="text-[10px] md:text-2xl font-semibold text-[#553E32] mb-6">Stylish men’s apparel for every occasion</p>
+            <div class="flex justify-start text-center items-center">
+              <a href="./catalog.html" class="bg-neutral-950 text-[10px] md:text-base text-white rounded-lg md:w-auto hover:bg-primary hover:scale-105 hover:text-black transition duration-500 md:py-3 md:px-14 py-2 px-8">Get Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- === FEATURED PRODUCT TITLE === -->
+        <div class="w-full mt-10">
+          <h2 class="text-2xl md:text-4xl font-bold text-neutral-950">Featured Product</h2>
+        </div>
+
+        <!-- === GRID FEATURED PRODUCT === -->
+        <div class="w-full bg-white py-10">
+          <div class="mx-auto max-w-[1200px]">
+            <div class="grid gap-5 grid-cols-2 md:grid-cols-4">
+              <!-- === ITEM PRODUCT === -->
+              <div class="item-card">
+                <div><img src="./assets/images/prod-1.png" alt="Product 1" /></div>
+
+                <div class="p-5">
+                  <a href="./detail-prod.html" class="text-sm md:text-base hover:text-primary hover:scale-105 transition duration-500 block">Sneakers Court Minimalis</a>
+                  <p class="text-sm md:text-base font-bold py-1">Rp. 275.000</p>
+                  <p class="text-sm md:text-base flex gap-2"><img src="./assets/images/icons/star-fill.svg" alt="Star Fill" /> 4.9</p>
+                </div>
+              </div>
+
+              <!-- === ITEM PRODUCT === -->
+              <div class="item-card">
+                <div><img src="./assets/images/prod-2.png" alt="Product 2" /></div>
+
+                <div class="p-5">
+                  <a href="./detail-prod.html" class="text-sm md:text-base hover:text-primary hover:scale-105 transition duration-500 block">Kaos Crewneck Esensial</a>
+                  <p class="text-sm md:text-base font-bold py-1">Rp. 800.000</p>
+                  <p class="text-sm md:text-base flex gap-2"><img src="./assets/images/icons/star-fill.svg" alt="Star Fill" /> 4.8</p>
+                </div>
+              </div>
+
+              <!-- === ITEM PRODUCT === -->
+              <div class="item-card">
+                <div><img src="./assets/images/prod-3.png" alt="Product 3" /></div>
+
+                <div class="p-5">
+                  <a href="./detail-prod.html" class="text-sm md:text-base hover:text-primary hover:scale-105 transition duration-500 block">Tas Selempang Klasikk</a>
+                  <p class="text-sm md:text-base font-bold py-1">Rp. 1.600.000</p>
+                  <p class="text-sm md:text-base flex gap-2"><img src="./assets/images/icons/star-fill.svg" alt="Star Fill" /> 4.7</p>
+                </div>
+              </div>
+
+              <!-- === ITEM PRODUCT === -->
+              <div class="item-card">
+                <div><img src="./assets/images/prod-4.png" alt="Product 4" /></div>
+
+                <div class="p-5">
+                  <a href="./detail-prod.html" class="text-sm md:text-base hover:text-primary hover:scale-105 transition duration-500 block">Kaos Soft Touch</a>
+                  <p class="text-sm md:text-base font-bold py-1">Rp. 650.000</p>
+                  <p class="text-sm md:text-base flex gap-2"><img src="./assets/images/icons/star-fill.svg" alt="Star Fill" /> 4.6</p>
+                </div>
+              </div>
+
+              <!-- === ITEM PRODUCT === -->
+              <div class="item-card">
+                <div><img src="./assets/images/prod-5.png" alt="Product 5" /></div>
+
+                <div class="p-5">
+                  <a href="./detail-prod.html" class="text-sm md:text-base hover:text-primary hover:scale-105 transition duration-500 block">Overshirt Utility</a>
+                  <p class="text-sm md:text-base font-bold py-1">Rp. 375.000</p>
+                  <p class="text-sm md:text-base flex gap-2"><img src="./assets/images/icons/star-fill.svg" alt="Star Fill" /> 4.5</p>
+                </div>
+              </div>
+
+              <!-- === ITEM PRODUCT === -->
+              <div class="item-card">
+                <div><img src="./assets/images/prod-6.png" alt="Product 6" /></div>
+
+                <div class="p-5">
+                  <a href="./detail-prod.html" class="text-sm md:text-base hover:text-primary hover:scale-105 transition duration-500 block">Sweater Rajut Cable</a>
+                  <p class="text-sm md:text-base font-bold py-1">Rp. 1.300.000</p>
+                  <p class="text-sm md:text-base flex gap-2"><img src="./assets/images/icons/star-fill.svg" alt="Star Fill" /> 4.8</p>
+                </div>
+              </div>
+
+              <!-- === ITEM PRODUCT === -->
+              <div class="item-card">
+                <div><img src="./assets/images/prod-7.png" alt="Product 7" /></div>
+
+                <div class="p-5">
+                  <a href="./detail-prod.html" class="text-sm md:text-base hover:text-primary hover:scale-105 transition duration-500 block">Syal Wol Kotak</a>
+                  <p class="text-sm md:text-base font-bold py-1">Rp. 220.000</p>
+                  <p class="text-sm md:text-base flex gap-2"><img src="./assets/images/icons/star-fill.svg" alt="Star Fill" /> 4.9</p>
+                </div>
+              </div>
+
+              <!-- === ITEM PRODUCT === -->
+              <div class="item-card">
+                <div><img src="./assets/images/prod-8.png" alt="Product 8" /></div>
+
+                <div class="p-5">
+                  <a href="./detail-prod.html" class="text-sm md:text-base hover:text-primary hover:scale-105 transition duration-500 block">Syal Wol Solid</a>
+                  <p class="text-sm md:text-base font-bold py-1">Rp. 180.000</p>
+                  <p class="text-sm md:text-base flex gap-2"><img src="./assets/images/icons/star-fill.svg" alt="Star Fill" /> 4.7</p>
+                </div>
+              </div>
+
+              <!-- === ITEM PRODUCT === -->
+              <div class="item-card">
+                <div><img src="./assets/images/prod-9.png" alt="Product 9" /></div>
+
+                <div class="p-5">
+                  <a href="./detail-prod.html" class="text-sm md:text-base hover:text-primary hover:scale-105 transition duration-500 block">Celana Panjang Tailored</a>
+                  <p class="text-sm md:text-base font-bold py-1">Rp. 2.200.000</p>
+                  <p class="text-sm md:text-base flex gap-2"><img src="./assets/images/icons/star-fill.svg" alt="Star Fill" /> 4.8</p>
+                </div>
+              </div>
+
+              <!-- === ITEM PRODUCT === -->
+              <div class="item-card">
+                <div><img src="./assets/images/prod-10.png" alt="Product 10" /></div>
+
+                <div class="p-5">
+                  <a href="./detail-prod.html" class="text-sm md:text-base hover:text-primary hover:scale-105 transition duration-500 block">Sneakers Harian</a>
+                  <p class="text-sm md:text-base font-bold py-1">Rp. 1.900.000</p>
+                  <p class="text-sm md:text-base flex gap-2"><img src="./assets/images/icons/star-fill.svg" alt="Star Fill" /> 4.9</p>
+                </div>
+              </div>
+
+              <!-- === ITEM PRODUCT === -->
+              <div class="item-card">
+                <div><img src="./assets/images/prod-11.png" alt="Product 11" /></div>
+
+                <div class="p-5">
+                  <a href="./detail-prod.html" class="text-sm md:text-base hover:text-primary hover:scale-105 transition duration-500 block">Jaket Puffer Quilted</a>
+                  <p class="text-sm md:text-base font-bold py-1">Rp. 450.000</p>
+                  <p class="text-sm md:text-base flex gap-2"><img src="./assets/images/icons/star-fill.svg" alt="Star Fill" /> 4.6</p>
+                </div>
+              </div>
+
+              <!-- === ITEM PRODUCT === -->
+              <div class="item-card">
+                <div><img src="./assets/images/prod-12.png" alt="Product 12" /></div>
+
+                <div class="p-5">
+                  <a href="./detail-prod.html" class="text-sm md:text-base hover:text-primary hover:scale-105 transition duration-500 block">Kemeja Oxford</a>
+                  <p class="text-sm md:text-base font-bold py-1">Rp. 950.000</p>
+                  <p class="text-sm md:text-base flex gap-2"><img src="./assets/images/icons/star-fill.svg" alt="Star Fill" /> 4.8</p>
+                </div>
+              </div>
+
+              <!-- === ITEM PRODUCT === -->
+              <div class="item-card">
+                <div><img src="./assets/images/prod-13.png" alt="Product 13" /></div>
+
+                <div class="p-5">
+                  <a href="./detail-prod.html" class="text-sm md:text-base hover:text-primary hover:scale-105 transition duration-500 block">Celana Pendek Chino</a>
+                  <p class="text-sm md:text-base font-bold py-1">Rp. 120.000</p>
+                  <p class="text-sm md:text-base flex gap-2"><img src="./assets/images/icons/star-fill.svg" alt="Star Fill" /> 4.5</p>
+                </div>
+              </div>
+
+              <!-- === ITEM PRODUCT === -->
+              <div class="item-card">
+                <div><img src="./assets/images/prod-14.png" alt="Product 14" /></div>
+
+                <div class="p-5">
+                  <a href="./detail-prod.html" class="text-sm md:text-base hover:text-primary hover:scale-105 transition duration-500 block">Topi Baseball 6-Panel</a>
+                  <p class="text-sm md:text-base font-bold py-1">Rp. 360.000</p>
+                  <p class="text-sm md:text-base flex gap-2"><img src="./assets/images/icons/star-fill.svg" alt="Star Fill" /> 4.7</p>
+                </div>
+              </div>
+
+              <!-- === ITEM PRODUCT === -->
+              <div class="item-card">
+                <div><img src="./assets/images/prod-15.png" alt="Product 15" /></div>
+
+                <div class="p-5">
+                  <a href="./detail-prod.html" class="text-sm md:text-base hover:text-primary hover:scale-105 transition duration-500 block">Kaos Katun Premium</a>
+                  <p class="text-sm md:text-base font-bold py-1">Rp. 1.100.000</p>
+                  <p class="text-sm md:text-base flex gap-2"><img src="./assets/images/icons/star-fill.svg" alt="Star Fill" /> 4.9</p>
+                </div>
+              </div>
+
+              <!-- === ITEM PRODUCT === -->
+              <div class="item-card">
+                <div><img src="./assets/images/prod-16.png" alt="Product 16" /></div>
+
+                <div class="p-5">
+                  <a href="./detail-prod.html" class="text-sm md:text-base hover:text-primary hover:scale-105 transition duration-500 block">Hoodie Pullover Fleece</a>
+                  <p class="text-sm md:text-base font-bold py-1">Rp. 275.000</p>
+                  <p class="text-sm md:text-base flex gap-2"><img src="./assets/images/icons/star-fill.svg" alt="Star Fill" /> 4.8</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- === BUTTON LOAD MORE  === -->
+            <div class="w-full flex justify-center mt-12">
+              <a
+                href="./catalog.html"
+                class="flex items-center justify-center max-w-full w-[220px] h-[48px] border border-neutral-300 text-neutral-950 py-2 px-8 rounded-xl font-semibold hover:bg-primary hover:scale-105 hover:text-black transition duration-500"
+                >Load more</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- === end HEROES SECTION === -->
+
+    <!-- === start FOOTER === -->
+    <footer class="border-t border-neutral-300 py-10">
+      <div id="footerWrapper" class="max-w-[1200px] w-full mx-auto flex flex-col gap-5 md:flex-row md:gap-10 px-4">
+        <!-- === LEFT SECTION SHIRT === -->
+        <div class="w-full md:w-1/2">
+          <div class="flex items-center gap-2.5 w-full pb-5">
+            <img src="./assets/images/icons/logo.svg" alt="Shirt Logo" />
+            <span class="text-neutral-950 text-2xl font-bold">Shirt</span>
+          </div>
+
+          <p class="text-sm pb-4 md:text-base md:pb-10 md:w-3/4">
+            Explore a realm of style with our fashion e-commerce platform, where shopping is effortless. Experience a smooth journey with an extensive selection of trendy apparel, all delivered directly to your home
+          </p>
+
+          <!-- === SOCIAL MEDIA === -->
+          <div>
+            <h4 class="font-bold pb-5">Follow on Social Media</h4>
+            <div class="flex gap-5">
+              <a href="#" class="border border-neutral-300 aspect-square rounded-full w-10 flex justify-center items-center hover:bg-primary transition duration-500">
+                <img src="./assets/images/icons/fb.svg" alt="Facebook" />
+              </a>
+              <a href="#" class="border border-neutral-300 aspect-square rounded-full w-10 flex justify-center items-center hover:bg-primary transition duration-500">
+                <img src="./assets/images/icons/instagram.svg" alt="instagram" />
+              </a>
+              <a href="#" class="border border-neutral-300 aspect-square rounded-full w-10 flex justify-center items-center hover:bg-primary transition duration-500">
+                <img src="./assets/images/icons/linked-in.svg" alt="Linked In" />
+              </a>
+              <a href="#" class="border border-neutral-300 aspect-square rounded-full w-10 flex justify-center items-center hover:bg-primary transition duration-500">
+                <img src="./assets/images/icons/tiktok.svg" alt="tiktok" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- === E-COMMERCE === -->
+        <div class="w-full md:w-1/4 pt-2.5 text-sm md:text-base">
+          <h4 class="font-bold pb-5">E-commerce</h4>
+          <ul class="flex flex-col gap-5">
+            <li><a href="#" class="hover:text-primary transition duration-500">About Us</a></li>
+            <li><a href="#" class="hover:text-primary transition duration-500">Terms & Condition</a></li>
+            <li><a href="#" class="hover:text-primary transition duration-500">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-primary transition duration-500">Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- === HELP === -->
+        <div class="w-full md:w-1/4 pt-2.5 text-sm md:text-base">
+          <h4 class="font-bold pb-5">Help</h4>
+          <ul class="flex flex-col gap-5">
+            <li><a href="#" class="hover:text-primary transition duration-500">How to Transact</a></li>
+            <li><a href="#" class="hover:text-primary transition duration-500">Payment Method</a></li>
+            <li><a href="#" class="hover:text-primary transition duration-500">How to Register</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- === end FOOTER === -->
+  </body>
+</html>
